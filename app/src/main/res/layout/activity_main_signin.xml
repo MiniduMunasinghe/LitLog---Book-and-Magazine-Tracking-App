@@ -1,0 +1,92 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Background Image -->
+    <ImageView
+        android:id="@+id/background_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background" /> <!-- Replace with your background image -->
+
+    <!-- Semi-Transparent White View (80% Opacity) -->
+    <View
+        android:id="@+id/white_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#B3000000" /> <!-- 80% opacity white color -->
+
+    <!-- Semi-Transparent Blue View (Bottom Half) -->
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/blue_overlay"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/logo1"
+        android:background="@android:color/transparent"/>
+
+    <View
+        android:id="@+id/blue_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="253dp"
+        android:layout_alignParentBottom="true"
+        android:background="#CC152039" /> <!-- 80% opacity #152039 color -->
+
+    <!-- User Input Fields and Sign In Button -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"> <!-- Matches the height of the blue_overlay -->
+
+        <EditText
+            android:id="@+id/username_or_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:background="@android:color/white"
+            android:hint="Username/Email"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp"
+            android:padding="15dp"
+            android:textColor="#000000"
+            android:textColorHint="#888888" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/username_or_email"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:background="@android:color/white"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:minHeight="48dp"
+            android:padding="15dp"
+            android:textColor="#000000"
+            android:textColorHint="#888888" />
+
+        <Button
+            android:id="@+id/btn_sign_in"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/password"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="20dp"
+            android:background="#000000"
+            android:minHeight="48dp"
+            android:padding="15dp"
+            android:text="Sign In"
+            android:textColor="#EEBA2B"
+            android:textSize="16sp" />
+    </RelativeLayout>
+</RelativeLayout>

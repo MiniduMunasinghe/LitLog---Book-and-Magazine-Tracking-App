@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.LitLog"
+        tools:targetApi="31">
+        <activity
+            android:name=".Test"
+            android:exported="false" />
+        <!-- Declare MainActivity_welcom as the launcher activity -->
+        <activity
+            android:name=".MainActivity_welcom"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- Other activities -->
+        <activity
+            android:name=".MainActivity_addBook"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity_magz"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity_books"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity_search"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity_signup_signin"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity_signup"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity_home"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity_signin"
+            android:exported="false" />
+    </application>
+
+</manifest>
